@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import '@fontsource-variable/onest';
 import Badge from '../components/Badge.astro'
+import Github from '../components/Github.astro'
+import Linkedin from '../components/Linkedin.astro'
+import Redesoc from '../components/Redesoc.astro'
+import Mail from '../components/Mail.astro'
+import Timeline from '../components/Timeline.astro'
 ---
 
-<Layout title="Manuel Guerrero Rodríguez">
+<Layout title="Porfolio | Manuel Guerrero Rodríguez">
 	<main>
 		<section class="w-full  mx-auto lg:w-[740px] py-44">
 		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-8">
@@ -14,10 +18,32 @@ import Badge from '../components/Badge.astro'
 			target="_blank"
 			rel="noopener"
 			class="flex justify-center items-center">
-				<Badge>Ready to work</Badge></h1>
-		<h2 class="text-xl opacity-85">Desarrollador Full Stack con +1 año de experencia. Siempre con ganas de seguir aprendiendo desde Sevilla, España. 
+				<Badge>Ready to work</Badge></a>
+		<h2 class="text-2xl opacity-85 text-wrap">
+			<span style="color:#00FF7F">Desarrollador Full Stack con +1 año de experiencia.</span> Siempre con ganas de seguir aprendiendo desde Sevilla, España.
 			</h2>
-			<ul></ul>
+				<nav class="flex gap-x-4 mt-8 pb-12">
+					<Redesoc href="https://github.com/FFoccuss">
+						<Github>
+							</Github>
+						Github
+					</Redesoc>
+					<Redesoc href="https://linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/">
+						<Linkedin>
+						</Linkedin>
+						LinkedIn
+					</Redesoc>
+					<Redesoc href="https://linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/">
+						<Mail>
+						</Mail>
+						manuel_guerrero6@hotmail.com
+					</Redesoc>
+
+				</nav>
+			<h2 class="text-2xl opacity-85 text-wrap">
+			Experiencia				
+			</h2>
+			<Timeline></Timeline>
 		</section>
 	</main>
 </Layout>
