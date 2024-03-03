@@ -1,0 +1,28 @@
+---
+const PROYECTOS = [
+    {
+        title: 'Tres en Raya',
+        description:'Juego en el que se usa los useffect y los hooks de React',
+        link: '#',
+        github: 'https://github.com/FFoccuss/AppReact',
+        image:'/ImagenProyecto/tres.webp',
+        tags: ["HTML", "CSS","JS","REACT"]
+    }
+]
+---
+
+{
+    PROYECTOS.map(({title, description, tags,image}) => 
+    (<article>
+        <h3 class="text-xl font-semibold text-green-400 mb-2">{title}</h3>
+        <ul class="flex gap-x-2 text-green-200">
+            {tags.map((tag) => (
+                <li>{tag}</li>))}
+            </ul>
+            <p class="text-lg mb-3 text-pretty">{description}</p>
+        <img class="w-[400px]" src={image} alt={`Imagen del proyecto ${image}`}>
+        
+
+            
+    </article>))
+}

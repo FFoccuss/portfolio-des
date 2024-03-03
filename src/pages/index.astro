@@ -7,22 +7,26 @@ import Linkedin from '../components/Linkedin.astro'
 import Redesoc from '../components/Redesoc.astro'
 import Mail from '../components/Mail.astro'
 import Timeline from '../components/Timeline.astro'
+import Section from '../components/Section.astro'
+import ExperienciaIcono from '../components/ExperienciaIcono.astro'
+import ProyectoIcono from '../components/ProyectoIcono.astro'
+import Proyecto from '../components/Proyectos.astro'
 ---
 
 <Layout title="Porfolio | Manuel Guerrero Rodríguez">
-	<main>
-		<section class="w-full  mx-auto lg:w-[740px] py-44">
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-8">
+	<main class="px-4 ">
+		<Section id=sobremi class="py-44 pb-32">
+		<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 			Buenas, me llamo Manuel 
 			<a href="https://www.linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/" 
 			target="_blank"
 			rel="noopener"
 			class="flex justify-center items-center">
 				<Badge>Ready to work</Badge></a>
-		<h2 class="text-2xl opacity-85 text-wrap">
+		<h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
 			<span style="color:#00FF7F">Desarrollador Full Stack con +1 año de experiencia.</span> Siempre con ganas de seguir aprendiendo desde Sevilla, España.
 			</h2>
-				<nav class="flex gap-x-4 mt-8 pb-12">
+				<nav class="flex gap-4 mt-8 pb-12 flex-wrap">
 					<Redesoc href="https://github.com/FFoccuss">
 						<Github>
 							</Github>
@@ -33,17 +37,28 @@ import Timeline from '../components/Timeline.astro'
 						</Linkedin>
 						LinkedIn
 					</Redesoc>
-					<Redesoc href="https://linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/">
+					<Redesoc href="mailto:manuel_guerrero6@hotmail.com">
 						<Mail>
 						</Mail>
 						manuel_guerrero6@hotmail.com
 					</Redesoc>
 
 				</nav>
-			<h2 class="text-2xl opacity-85 text-wrap">
-			Experiencia				
-			</h2>
+			
+			
+		</Section>
+		<Section id="experiencia">
+			<h2 class="text-2xl opacity-85 font-bold flex gap-x-2 item-center">
+				<ExperienciaIcono class="size=10" />Experiencia				
+				</h2>
 			<Timeline></Timeline>
-		</section>
+		</Section>
+
+		<Section id="proyectos">
+			<h2 class="text-2xl opacity-85 font-bold flex gap-x-2 item-center">
+				<ProyectoIcono class="size=10" />Proyectos	
+				</h2>
+				<Proyecto />
+		</Section>
 	</main>
 </Layout>
