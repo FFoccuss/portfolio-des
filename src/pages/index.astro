@@ -1,64 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@fontsource-variable/onest';
-import Badge from '../components/Badge.astro'
-import Github from '../components/Github.astro'
-import Linkedin from '../components/Linkedin.astro'
-import Redesoc from '../components/Redesoc.astro'
-import Mail from '../components/Mail.astro'
-import Timeline from '../components/Timeline.astro'
-import Section from '../components/Section.astro'
-import ExperienciaIcono from '../components/ExperienciaIcono.astro'
-import ProyectoIcono from '../components/ProyectoIcono.astro'
-import Proyecto from '../components/Proyectos.astro'
+import Layout from "@/layouts/Layout.astro"
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
 ---
 
-<Layout title="Porfolio | Manuel Guerrero Rodríguez">
-	<main class="px-4 ">
-		<Section id=sobremi class="py-44 pb-32">
-		<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-			Buenas, me llamo Manuel 
-			<a href="https://www.linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/" 
-			target="_blank"
-			rel="noopener"
-			class="flex justify-center items-center">
-				<Badge>Ready to work</Badge></a>
-		<h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
-			<span style="color:#00FF7F">Desarrollador Full Stack con +1 año de experiencia.</span> Siempre con ganas de seguir aprendiendo desde Sevilla, España.
-			</h2>
-				<nav class="flex gap-4 mt-8 pb-12 flex-wrap">
-					<Redesoc href="https://github.com/FFoccuss">
-						<Github>
-							</Github>
-						Github
-					</Redesoc>
-					<Redesoc href="https://linkedin.com/in/manuel-guerrero-rodr%C3%ADguez-7b9179227/">
-						<Linkedin>
-						</Linkedin>
-						LinkedIn
-					</Redesoc>
-					<Redesoc href="mailto:manuel_guerrero6@hotmail.com">
-						<Mail>
-						</Mail>
-						manuel_guerrero6@hotmail.com
-					</Redesoc>
+<Layout
+  title="Porfolio || Manuel Guerrero Rodríguez"
+  description="Desarrollador web y hombre del metal."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
 
-				</nav>
-			
-			
-		</Section>
-		<Section id="experiencia">
-			<h2 class="text-2xl opacity-85 font-bold flex gap-x-2 item-center">
-				<ExperienciaIcono class="size=10" />Experiencia				
-				</h2>
-			<Timeline></Timeline>
-		</Section>
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
 
-		<Section id="proyectos">
-			<h2 class="text-2xl opacity-85 font-bold flex gap-x-2 item-center">
-				<ProyectoIcono class="size=10" />Proyectos	
-				</h2>
-				<Proyecto />
-		</Section>
-	</main>
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>
